@@ -1,7 +1,8 @@
 #include <vector>
 #include <string>
 
-#include "Entity.h"
+#include "Bullet.h"
+
 #include <GLFW/glfw3.h>
 
 #include "ResourceManager.h"
@@ -36,7 +37,7 @@ class Game
 		void processInput(GLfloat deltaTime);
 		void update(GLfloat deltaTime);
 		void render();
-		void createNewEntity(glm::vec3 position, std::string shaderName);
+		void createNewEntity();
 
 	private:
 		// Game state

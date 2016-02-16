@@ -23,6 +23,8 @@ public:
 	void processMouseInput(double xPosition, double yPosition);
 	void processKeyboardInput(CameraDirection direction, GLfloat deltaTime);
 	glm::mat4 getViewMatrix();
+	glm::vec3 getPosition() { return mPosition; }
+	glm::vec3 getForward() { return glm::normalize(mFront); }
 
 private:
 

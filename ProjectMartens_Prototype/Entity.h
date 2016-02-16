@@ -1,6 +1,7 @@
 #ifndef ENTITY_H
 #define ENTITY_H
 
+#include <iostream>
 #include "Texture.h"
 #include "Shader.h"
 #include <SOIL\SOIL.h>
@@ -18,6 +19,7 @@ class Entity
 {
 public:
 
+	Entity(){};
 	Entity(Shader &shader);
 	Entity(Shader &shader, Texture2D &texture1, glm::vec3 position, glm::vec3 eulerAngles, glm::vec3 scale);
 	~Entity();

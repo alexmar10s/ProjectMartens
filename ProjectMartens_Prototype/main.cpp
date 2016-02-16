@@ -155,5 +155,6 @@ void mouse_button_callback(GLFWwindow* window, int button, int action, int mode)
 	if (button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS)
 	{
 		std::cout << "CLICKED" << std::endl;
+		game.createNewEntity();
 	}
 }

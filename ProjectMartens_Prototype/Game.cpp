@@ -40,17 +40,13 @@ void Game::initialize()
 
 	camera = new Camera();
 
-	cubes.push_back(new Entity(ResourceManager::GetShader("Default"), 
-								ResourceManager::GetTexture("container"), 
-								glm::vec3(0.0f, 0.0f, 0.0f), 
-								glm::vec3(5.0f, 100.0f, 0.0f),
-								glm::vec3(0.15f, 0.15f, 0.15f)));
+	//cubes.push_back(new Entity(ResourceManager::GetShader("Default"), 
+	//							ResourceManager::GetTexture("container"), 
+	//							glm::vec3(0.0f, 0.0f, 0.0f), 
+	//							glm::vec3(5.0f, 100.0f, 0.0f),
+	//							glm::vec3(0.15f, 0.15f, 0.15f)));
 
-	cubes.push_back(new Entity(ResourceManager::GetShader("Default"),
-								ResourceManager::GetTexture("awesomeface"),
-								glm::vec3(1.0f, 0.0f, 0.0f),
-								glm::vec3(0.0f, 0.0f, 40.0f),
-								glm::vec3(0.25f, 0.25f, 0.25f)));
+
 }
 
 void Game::processInput(GLfloat deltaTime)
@@ -87,7 +83,11 @@ void Game::render()
 	}
 }
 
-void Game::createNewEntity(glm::vec3 position, std::string shaderName )
+void Game::createNewEntity()
 {
-	
+	cubes.push_back(new Bullet(ResourceManager::GetShader("Default"),
+		ResourceManager::GetTexture("awesomeface"),
+		camera->getPosition(),
+		glm::vec3(5.0f, 100.0f, 0.0f),
+		glm::vec3(0.15f, 0.15f, 0.15f), 2.0f, camera->getForward()));
 }

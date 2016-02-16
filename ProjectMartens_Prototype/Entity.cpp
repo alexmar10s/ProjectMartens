@@ -114,5 +114,5 @@ void Entity::render()
 
 void Entity::update(GLfloat deltaTime)
 {
-
+	std::cout << "Hello from Entity" << std::endl;
 }
